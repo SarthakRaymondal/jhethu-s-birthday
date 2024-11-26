@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhethu's Birthday</title>
+    <link rel="icon" type="images/jpeg" href="cap1.jpeg">
+    <style>
+        body {
+            margin: 0;
+            background-color: #3E3C55;
+        }
+        #card {
+            background-color: white;
+            width: 80%;
+            height: 330px;
+            border-radius: 10px;
+            border: none;
+            display: block;
+            overflow: unset;
+            transition: 4s;
+
+        }
+        #card1 {
+            background-color: white;
+            width: 80%;
+            height: 340px;
+            border-radius: 10px;
+            border: none;
+            display: block;
+            overflow: unset;
+            transition: 4s;
+            position: fixed;
+            top:0;
+            margin-top: -800px;
+            visibility: hidden;
+            border-top: 10px solid greenyellow;
+        }
+        @media(max-width:650px) {
+            #card1 {
+            background-color: white;
+            width: 80%;
+            height: 340px;
+            border: none;
+            border-radius: 1px;
+            display: block;
+            overflow: scroll;
+            transition: 4s;
+            position: fixed;
+            top:0;
+            margin-top: -800px;
+            visibility: hidden;
+            border-top: 7px solid greenyellow;
+            }
+        }
+        .ft1 {
+          font-family: "Parkinsans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: 900;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .title2 {
+            font-size: 30px;
+            font-weight: 900;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .text {
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 900;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        /* width */
+::-webkit-scrollbar {
+  width: 5px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.button1 {
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.1s;
+    font-weight: 900;
+    overflow: hidden;
+
+}
+.button1:hover {
+    filter: brightness(80%);
+}
+    </style>
+</head>
+<body onresize="ch1()">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans&display=swap" rel="stylesheet">
+<div style="height: 100vh;width: 100%;display: flex;justify-content: center;align-items: center;" id="main">
+     <div id="card"><br>
+           <div style="width: 98%;display: flex;justify-content: center;"><a class="ft1 title">Happy Birthday</a></div><br>
+           <div style="width: 98%;display: flex;justify-content: center;"><a class="ft1 text">"Happy Birthday Jhethu.<br>Hoping that your having a good day"</a></div>
+           <br><br>
+           <div style="width: 100%;display: flex;justify-content: center;"><button class="button1 ft1" onclick="cardo()">See the special message</button></div>
+     </div>
+     <div id="card1"><br>
+        <div style="width: 100%;display: flex;justify-content: center;"><a class="ft1 title2">Message for u</a></div><br>
+        <div style="width: 98%;display: flex;justify-content: center;"><a class="ft1 text">"Happy birthday Jhethu!! Hoping that you are having a very good day&nbsp;<spam style="color: darkblue;text-decoration: underline;cursor: pointer;" onclick="ask1()">Yes/No</spam>. Today's your birthday and i hope that u have good luck😛 U are a very successful man who passed from IIT Kharadpur and also succeeded Borda and Didibhai. We don't see these kind of people nowadays. So ur really special. I hope that I can learn a lot of valuable knowledge. So once again,a very good happy birthday."<br><br>-Sarthak</a></div>
+        <br><br>
+        <div style="width: 100%;display: flex;justify-content: center;"><button class="button1 ft1" onclick="email()">Made by Sarthak💓</button></div><br>
+  </div>
+</div>
+<script>
+        var screenheight;
+        function ch1() {
+            screenheight = window.innerHeight
+            //Useless :(
+            
+        }
+        function cardo() {
+        document.getElementById("card").style.position = "fixed"
+        document.getElementById("card").style.top = "0px"
+        document.getElementById("card").style.marginTop = "-800px"
+        window.setTimeout(rid,2000)
+    }
+    function rid() {
+        document.getElementById("card").style.visibility = "hidden"
+        spawncard()
+    }
+    function spawncard() {
+        document.getElementById("card1").style.visibility = "visible"
+        document.getElementById("card1").style.marginTop = "800px"
+        document.getElementById("card1").style.position = "unset"
+        document.getElementById("card1").style.marginTop = "0px"
+    }
+    function ask1() {
+        var uday = confirm("Are u really having a good day?🤫")
+        if(uday) {
+            alert("That's the spirit!!Good to hear!!")
+        }
+        else {
+            alert("Nop probs,do what u like and enjoy")
+        }
+    }
+    function email() {
+        var ask2 = confirm("Do u want to email Sarthak?")
+        if (ask2) {
+            alert("Email system is broken!!Mail manually Raymondal.sarthak@outlook.com")
+        }
+    }
+</script>
+</body>
+</html>
